@@ -1,0 +1,52 @@
+import { Outlet, Link } from "react-router-dom";
+
+export default function AppLayout() {
+  return (
+    <div className="flex h-screen bg-gray-100 text-gray-900">
+      {/* Sidebar */}
+      <aside className="hidden md:flex flex-col w-60 bg-gray-900 text-white p-4">
+        <h1 className="text-2xl font-bold mb-6 text-yellow-400">📚 Planora</h1>
+        <nav className="flex flex-col gap-4">
+          <Link to="/" className="hover:text-yellow-400">
+            Dashboard
+          </Link>
+          <Link to="/tasks" className="hover:text-yellow-400">
+            Tasks
+          </Link>
+          <Link to="/profile" className="hover:text-yellow-400">
+            Profile
+          </Link>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col">
+        {/* Navbar */}
+        <header className="h-14 flex items-center justify-between px-4 border-b bg-white shadow-sm">
+          <h2 className="text-xl font-semibold">Welcome Back 👋</h2>
+          <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500">
+            Logout
+          </button>
+        </header>
+
+        {/* Outlet for pages */}
+        <main className="p-6 overflow-y-auto">
+          <Outlet />
+        </main>
+      </div>
+
+      {/* Bottom bar for mobile */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 flex justify-around bg-gray-900 text-white p-3 border-t">
+        <Link to="/" className="hover:text-yellow-400">
+          🏠
+        </Link>
+        <Link to="/tasks" className="hover:text-yellow-400">
+          📋
+        </Link>
+        <Link to="/profile" className="hover:text-yellow-400">
+          👤
+        </Link>
+      </nav>
+    </div>
+  );
+}

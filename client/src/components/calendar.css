@@ -1,0 +1,66 @@
+/* Calendar container */
+.react-calendar {
+  background-color: #1f2937; /* gray-800 */
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* Navigation (month/year) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center; /* center align month/year */
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__navigation button {
+  color: white; /* button arrows */
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #374151; /* hover gray-700 */
+}
+
+/* Weekday names */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: bold;
+  color: #facc15; /* yellow */
+}
+
+/* Tiles */
+.react-calendar__tile {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* date number top */
+  height: 4rem !important;
+  width: 4rem !important;
+  padding-top: 0.25rem !important;
+  position: relative;
+}
+
+.react-calendar__tile > span {
+  margin-top: auto; /* symbol bottom */
+}
+
+.react-calendar__tile--active {
+  background-color: #374151 !important; /* Old yellow -> change to dark bg */
+  color: white !important; /* Number visible */
+  border-radius: 0.5rem;
+  border: 2px solid #facc15; /* Yellow border instead of bg */
+}
+
+.react-calendar__tile:hover {
+  background-color: #374151 !important; /* gray-700 hover */
+}
