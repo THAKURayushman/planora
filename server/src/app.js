@@ -7,8 +7,8 @@ const cookieParser = require("cookie-parser");
 const rateLimit = require("express-rate-limit");
 
 const taskRoutes = require("./routes/taskRoutes");
-const authRoutes = require("./routes/auth.routes");
-const { notFound, errorHandler } = require("./middleware/error.middleware");
+const authRoutes = require("./routes/authroutes");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 const app = express();
 

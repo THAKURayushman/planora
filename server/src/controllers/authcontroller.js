@@ -4,7 +4,7 @@ const {
   createAccessToken,
   createRefreshToken,
   verifyRefresh,
-} = require("../utils/token.util");
+} = require("../utils/tokenutil");
 
 const registerSchema = z.object({
   name: z.string().min(2).max(80),
