@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/tasks"; // backend base URL
+const API_URL = `${VITE_API_URL}`; // backend base URL
 
 // Get all tasks
 export const getTasks = async () => {
