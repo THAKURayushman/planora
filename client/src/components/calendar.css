@@ -38,6 +38,13 @@
   color: #facc15; /* yellow */
 }
 
+.react-calendar__tile--now {
+  background: #374151 !important; /* Tailwind gray-700 */
+  border-radius: 8px;
+  color: #facc15 !important; /* yellow text for contrast */
+  opacity: 0.9; /* slightly faded look */
+}
+
 /* Tiles */
 .react-calendar__tile {
   display: flex !important;

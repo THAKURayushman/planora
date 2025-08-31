@@ -4,11 +4,12 @@ const TaskSchema = new Schema(
   {
     title: { type: String, required: true, trim: true },
     subject: { type: String, default: "" },
-    durationMinutes: { type: Number, required: true, min: 5 },
+    duration: { type: Number, required: true, min: 5 },
     priority: {
-      type: String,
-      enum: ["low", "medium", "high"],
-      default: "medium",
+      type: Number,
+      min: 1,
+      max: 10,
+      default: 5, // middle value
     },
     deadline: { type: Date },
     status: {
