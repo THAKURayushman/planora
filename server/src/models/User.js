@@ -1,3 +1,5 @@
+//src/models/User.js
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
@@ -12,7 +14,7 @@ const userSchema = new mongoose.Schema(
       index: true,
     },
     password: { type: String, required: true, minlength: 8, select: false },
-    role: { type: String, enum: ["user", "admin"], default: "user" },
+    role: { type: String, enum: ["user", "admin", "guest"], default: "user" },
 
     // Single active refresh token (simpler). For multi-device, store array.
     refreshTokenHash: { type: String, select: false },

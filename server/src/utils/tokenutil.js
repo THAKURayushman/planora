@@ -1,3 +1,5 @@
+//src/utils/tokenutil.js
+
 const jwt = require("jsonwebtoken");
 
 // Helper to sign tokens

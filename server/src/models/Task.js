@@ -1,3 +1,5 @@
+//src/models/Task.js
+
 const { Schema, model } = require("mongoose");
 
 const TaskSchema = new Schema(
@@ -16,6 +18,11 @@ const TaskSchema = new Schema(
       type: String,
       enum: ["todo", "in-progress", "done"],
       default: "todo",
+    },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
   },
   { timestamps: true }

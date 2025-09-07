@@ -1,10 +1,6 @@
-import axios from "axios";
+// src/api/tasks.js
+import API from "./axiosInstance"; // use the axios instance with interceptors
 
-const API = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}`,
-});
-
-// CRUD requests
 export const fetchTasks = () => API.get("/tasks");
 export const fetchTask = (id) => API.get(`/tasks/${id}`);
 export const createTask = (taskData) => API.post("/tasks", taskData);
